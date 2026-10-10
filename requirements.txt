@@ -1,0 +1,22 @@
+streamlit
+
+# Utility libraries
+numpy
+pandas
+
+# Face Recognition
+scikit-learn
+dlib-bin
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
+
+supabase
+bcrypt
+
+segno
+pillow
+
+librosa
+resemblyzer
+# Timezone data for showing attendance times in the viewer's timezone (needed on Windows)
+tzdata

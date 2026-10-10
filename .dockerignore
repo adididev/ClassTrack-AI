@@ -1,0 +1,13 @@
+.git
+.gitignore
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+.streamlit/secrets.toml
+README.md
+supabase/
+landing/
+docs/

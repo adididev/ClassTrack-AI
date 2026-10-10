@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About ClassTrack AI</title>
+  <meta name="description" content="Why ClassTrack AI exists, what it does, and how its face and voice recognition work.">
+  <link rel="canonical" href="https://classtrack-ai-landing.vercel.app/about">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ClassTrack AI">
+  <meta property="og:title" content="About ClassTrack AI">
+  <meta property="og:description" content="Why ClassTrack AI exists, what it does, and how its face and voice recognition work.">
+  <meta property="og:url" content="https://classtrack-ai-landing.vercel.app/about">
+  <meta property="og:image" content="https://classtrack-ai-landing.vercel.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2563EB">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <img src="/assets/classtrack_logo.png" alt="">
+        ClassTrack <span>AI</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#how-it-works">How it works</a>
+        <a href="/about" aria-current="page">About</a>
+        <a href="https://github.com/adididev/ClassTrack-AI">GitHub</a>
+        <a class="btn btn-primary btn-small" href="https://classtrack-ai.streamlit.app">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="wrap prose">
+      <h1>About ClassTrack AI</h1>
+      <p class="lead">
+        Calling out names or passing around a sign-in sheet eats into every class, and it is easy to get wrong.
+        ClassTrack AI gives that time back: the teacher takes one photo of the room, and the AI works out who is there.
+      </p>
+
+      <h2>What it does</h2>
+      <div class="grid-2">
+        <div class="tile">
+          <h3>Face recognition attendance</h3>
+          <p>Upload or capture classroom photos. Every recognized, enrolled student is marked present.</p>
+        </div>
+        <div class="tile">
+          <h3>Voice attendance</h3>
+          <p>Record students saying "present". Students who enrolled their voice are recognized by it.</p>
+        </div>
+        <div class="tile">
+          <h3>Join with a code or QR</h3>
+          <p>Teachers share a subject code, link, or QR code. Students enroll in as many subjects as they need.</p>
+        </div>
+        <div class="tile">
+          <h3>Teacher stays in control</h3>
+          <p>Results are reviewed before saving, can be corrected later, and can be downloaded as a spreadsheet.</p>
+        </div>
+      </div>
+
+      <h2>How the AI works</h2>
+      <p>
+        <strong>Faces.</strong> When a student signs up, ClassTrack AI finds their face in the webcam photo and turns it into
+        128 numbers that describe its shape (a "face embedding"), using the open-source dlib face recognition model.
+        In a classroom photo, every face is converted the same way and compared with the enrolled students.
+        A student is only marked present when the match is close enough, so look-alikes and strangers are left out.
+      </p>
+      <p>
+        <strong>Voices.</strong> Students can optionally record a short phrase. It is turned into a "voiceprint" with the
+        open-source Resemblyzer model, and speakers in a classroom recording are matched against those voiceprints.
+      </p>
+      <p>
+        <strong>People check the result.</strong> The AI suggests who is present; the teacher confirms before anything is saved.
+        Recognition works best with good lighting and faces turned towards the camera.
+      </p>
+
+      <h2>Privacy by design</h2>
+      <ul>
+        <li>Students agree to the <a href="/privacy">Privacy Policy</a> before their face or voice data is stored.</li>
+        <li>Photos and recordings are processed and then discarded. Only the numeric embeddings are kept.</li>
+        <li>Teacher passwords are stored as one-way bcrypt hashes, never in plain text.</li>
+        <li>The database is locked down so only the app's server, using a private key, can read or write data.</li>
+      </ul>
+
+      <h2>Open source</h2>
+      <p>
+        ClassTrack AI is built with Python, Streamlit, Supabase (PostgreSQL), dlib, scikit-learn and Resemblyzer.
+        The full source code is on <a href="https://github.com/adididev/ClassTrack-AI">GitHub</a>.
+      </p>
+
+      <h2>Credits</h2>
+      <p>
+        ClassTrack AI is developed by <a href="https://github.com/adididev">adididev</a>. Face recognition uses the
+        open-source <a href="http://dlib.net">dlib</a> library and voice recognition uses
+        <a href="https://github.com/resemble-ai/Resemblyzer">Resemblyzer</a>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Ready to try it?</strong> Teachers and students can sign up for free.</p>
+        <p style="margin-top: 14px;"><a class="btn btn-primary" href="https://classtrack-ai.streamlit.app" style="color:#fff">Register now &rarr;</a></p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; 2026 ClassTrack AI</span>
+      <nav class="foot-links">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="https://github.com/adididev/ClassTrack-AI">GitHub</a>
+        <a href="https://github.com/adididev/ClassTrack-AI/issues">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

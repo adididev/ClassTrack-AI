@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · ClassTrack AI</title>
+  <meta name="description" content="What data ClassTrack AI collects, why, how it is protected, and how to have it deleted.">
+  <link rel="canonical" href="https://classtrack-ai-landing.vercel.app/privacy">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ClassTrack AI">
+  <meta property="og:title" content="ClassTrack AI Privacy Policy">
+  <meta property="og:description" content="What data ClassTrack AI collects, why, how it is protected, and how to have it deleted.">
+  <meta property="og:url" content="https://classtrack-ai-landing.vercel.app/privacy">
+  <meta property="og:image" content="https://classtrack-ai-landing.vercel.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2563EB">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <img src="/assets/classtrack_logo.png" alt="">
+        ClassTrack <span>AI</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#how-it-works">How it works</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/adididev/ClassTrack-AI">GitHub</a>
+        <a class="btn btn-primary btn-small" href="https://classtrack-ai.streamlit.app">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="wrap prose">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: 11 October 2026</p>
+
+      <p class="lead">
+        ClassTrack AI uses face and voice data to mark classroom attendance. This policy explains what we store,
+        why, who can see it, and how to have it deleted. We keep it short and in plain language.
+      </p>
+
+      <div class="callout">
+        <p><strong>In short:</strong> we store only what attendance needs, we never sell or share your data for advertising,
+        we do not keep photos or recordings, and you can ask for your data to be deleted at any time.</p>
+      </div>
+
+      <h2>1. What we collect</h2>
+      <p><strong>Teachers</strong></p>
+      <ul>
+        <li>Username and name.</li>
+        <li>Password, stored only as a one-way bcrypt hash. Nobody, including us, can read your password.</li>
+        <li>The subjects you create (code, name, section) and the attendance you save.</li>
+      </ul>
+      <p style="margin-top: 16px;"><strong>Students</strong></p>
+      <ul>
+        <li>Name.</li>
+        <li><strong>Face data:</strong> a list of 128 numbers calculated from your sign-up photo (a "face embedding").
+          The photo itself is not stored.</li>
+        <li><strong>Voice data (optional):</strong> a list of 256 numbers calculated from your voice sample (a "voiceprint").
+          The recording itself is not stored.</li>
+        <li>The subjects you enroll in and your attendance records (date, time, present or absent).</li>
+      </ul>
+      <p style="margin-top: 16px;"><strong>Classroom photos and recordings</strong> uploaded by teachers are processed in memory to
+        recognize students and are then discarded. They are never saved to the database.</p>
+
+      <h2>2. Why we use it</h2>
+      <ul>
+        <li>To let you log in (students by face, teachers by password).</li>
+        <li>To recognize enrolled students in classroom photos or recordings and mark attendance.</li>
+        <li>To show teachers and students their subjects and attendance history.</li>
+      </ul>
+      <p>We do not use your data for advertising, we do not sell it, and we do not use it to train AI models.</p>
+
+      <h2>3. Consent</h2>
+      <p>
+        Face and voice data are biometric data. Students are asked to agree to this policy before their profile is created,
+        and voice enrollment is optional. You can withdraw consent at any time by asking us to delete your data (see section 7).
+        If a student is under 18, a parent or guardian should agree on their behalf, and the school or teacher using
+        ClassTrack AI is responsible for collecting that consent.
+      </p>
+
+      <h2>4. Who can see your data</h2>
+      <ul>
+        <li><strong>Teachers</strong> see the names and attendance of students enrolled in their own subjects.</li>
+        <li><strong>Students</strong> see their own subjects and attendance.</li>
+        <li><strong>Service providers</strong> that run ClassTrack AI process data on our behalf:
+          Supabase (database), Streamlit Community Cloud (app hosting), and Vercel (this website).
+          This website also loads fonts from Google Fonts.</li>
+      </ul>
+      <p>We share data with authorities only if the law requires it.</p>
+
+      <h2>5. How we protect it</h2>
+      <ul>
+        <li>All traffic is encrypted with HTTPS.</li>
+        <li>Passwords are hashed with bcrypt.</li>
+        <li>The database is locked down so only the app's server, using a private key, can read or write data.</li>
+        <li>Teachers review AI results before attendance is saved, and can correct mistakes afterwards.</li>
+      </ul>
+      <p>No system is perfectly secure. If we learn of a breach that affects you, we will tell you.</p>
+
+      <h2>6. How long we keep it</h2>
+      <p>
+        We keep account data until you ask us to delete it. When a teacher deletes a subject, its enrollments and
+        attendance records are deleted too. Deleting a student or teacher account deletes their related records.
+      </p>
+
+      <h2>7. Your rights</h2>
+      <p>
+        Depending on where you live, including under India's Digital Personal Data Protection Act, 2023 and the EU GDPR,
+        you can ask to see, correct, or delete your data, and to withdraw consent. To make a request, contact us
+        through our <a href="https://github.com/adididev/ClassTrack-AI">GitHub page</a>. Please don't post personal details
+        publicly; tell us how to reach you and we will follow up privately.
+      </p>
+
+      <h2>8. Accuracy</h2>
+      <p>
+        Face and voice recognition can make mistakes, especially in poor lighting or noisy rooms. That is why teachers
+        confirm every result before it is saved and can correct records later.
+      </p>
+
+      <h2>9. Changes to this policy</h2>
+      <p>If we change this policy, we will update the date at the top of this page.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; 2026 ClassTrack AI</span>
+      <nav class="foot-links">
+        <a href="/about">About</a>
+        <a href="/privacy" aria-current="page">Privacy Policy</a>
+        <a href="https://github.com/adididev/ClassTrack-AI">GitHub</a>
+        <a href="https://github.com/adididev/ClassTrack-AI/issues">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
